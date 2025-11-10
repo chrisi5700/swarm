@@ -8,7 +8,8 @@
       "generator": "Ninja",
       "binaryDir": "${sourceDir}/build/${presetName}",
       "cacheVariables": {
-        "CMAKE_CXX_STANDARD": "23",
+        "Torch_DIR": "/opt/libtorch/share/cmake/Torch",
+        "CMAKE_CXX_STANDARD": "20",
         "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
         "ENABLE_COMPILER_WARNINGS": "ON"
       }

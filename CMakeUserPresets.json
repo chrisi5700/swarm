@@ -4,9 +4,10 @@
     {
       "name": "clion-vcpkg",
       "hidden": true,
-      "toolchainFile": "$env{HOME}/.vcpkg-clion/vcpkg/scripts/buildsystems/vcpkg.cmake",
       "cacheVariables": {
-        "VCPKG_FEATURE_FLAGS": "manifests,binarycaching"
+        "CMAKE_TOOLCHAIN_FILE": "/home/chris/.vcpkg-clion/vcpkg/scripts/buildsystems/vcpkg.cmake",
+        "VCPKG_FEATURE_FLAGS": "manifests,binarycaching",
+        "VCPKG_TARGET_TRIPLET": "x64-linux"
       }
     },
     {

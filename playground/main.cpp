@@ -1,14 +1,37 @@
-//    _____  _           __     _______ _____   ____  _    _ _   _ _____
-//   |  __ \| |        /\\ \   / / ____|  __ \ / __ \| |  | | \ | |  __ \
-//   | |__) | |       /  \\ \_/ / |  __| |__) | |  | | |  | |  \| | |  | |
-//   |  ___/| |      / /\ \\   /| | |_ |  _  /| |  | | |  | | . ` | |  | |
-//   | |    | |____ / ____ \| | | |__| | | \ \| |__| | |__| | |\  | |__| |
-//   |_|    |______/_/    \_\_|  \_____|_|  \_\\____/ \____/|_| \_|_____/
-//
+#include <iostream>
+#include <SFML/Graphics.hpp>
 
-#include <print>
+int main() {
+	unsigned int width = 640;
+	unsigned int height = 360;
+	auto window = sf::RenderWindow(sf::VideoMode({ width,height }), "SFML Test");
 
-int main()
-{
-    std::println("Hello Playground");
+	while (window.isOpen())
+	{
+		while (const std::optional event = window.pollEvent())
+		{
+			if (event->is<sf::Event::Closed>())
+			{
+				window.close();
+			}
+			else if (const auto* keyPressed = event->getIf<sf::Event::KeyPressed>())
+			{
+				if (keyPressed->scancode == sf::Keyboard::Scancode::Escape)
+				{
+					window.close();
+				}
+			}
+		}
+		//Render
+		window.clear(sf::Color(0x4B0082FF));
+
+		//Drawing
+
+
+		window.display();
+
+	}
+
+
+	return 0;
 }
