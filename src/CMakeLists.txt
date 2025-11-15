@@ -2,7 +2,7 @@
 # See README.md for CMake library patterns and examples
 
 target_add_executable(swarm)
-target_sources(swarm PRIVATE PolicyNetwork.cpp SimulationState.cpp PPO.cpp main.cpp common.cpp)
+target_sources(swarm PRIVATE common.cpp main.cpp TensorFactory.cpp Agent.cpp Training.cpp SimpleMovingEnvironment.cpp)
 target_link_libraries(swarm PRIVATE
         SFML::Graphics
         SFML::Window
